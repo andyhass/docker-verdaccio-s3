@@ -10,7 +10,7 @@ if [ -n "$S3_BUCKET" ]; then
   echo "Changing file permissions to verdaccio user"
   chown -R verdaccio /verdaccio
 
-  echo "*/5 * * * * /usr/local/bin/s3-sync.sh > /var/log/s3-sync.log" | /usr/bin/crontab -
+  echo "*/1 * * * * /usr/local/bin/s3-sync.sh > /var/log/s3-sync.log" | /usr/bin/crontab -
   echo "Ensure Crond is running in background"
   /usr/sbin/crond
 fi
