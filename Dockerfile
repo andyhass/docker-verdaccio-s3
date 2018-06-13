@@ -1,4 +1,4 @@
-FROM verdaccio/verdaccio:2.7
+FROM verdaccio/verdaccio:latest
 
 USER root
 
